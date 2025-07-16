@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: capstone
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./BackendYorkuSensor
+    depends_on:
+      - postgres
+    environment:
+      - FLASK_DEBUG=1
+      - DB_URL=postgresql://user:password@postgres:5432/capstone
+      - APP_CONFIG=production
+    ports:
+      - "4000:4000"
+
+  frontend:
+    build: ./YorkuSensorFrontend
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
