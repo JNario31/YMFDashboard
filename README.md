@@ -36,9 +36,9 @@ docker-compose up --build
 ```
 #### 🌐 Accessing the App
 ```
-Component	URL
-Frontend	http://localhost:3000
-Backend	  http://localhost:4000
+Component  URL
+Frontend   http://localhost:3000
+Backend    http://localhost:4000
 ```
 
 #### 🧪 Making Changes
