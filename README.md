@@ -11,27 +11,36 @@ sudo apt update
 sudo apt install -y docker.io
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
-
+```
 Then restart your terminal or run:
+```
 newgrp docker
+```
 
 Verify Docker installation
+```
 docker --version
+```
 
 Install docker compose:
+```
 sudo apt install -y docker-compose
+```
 
 Verify docker compose installation
+```
 docker-compose --version
 ```
 
 #### 🚀 Running the App
-```
 Clone Repo:
+```
 git clone https://github.com/JNario31/YMFDashboard.git
 cd YMFSensorApp
+```
 
 Build and start containers in root folder:
+```
 docker-compose up --build
 ```
 #### 🌐 Accessing the App
@@ -42,14 +51,16 @@ Backend    http://localhost:4000
 ```
 
 #### 🧪 Making Changes
-```
 Modify the frontend code in: YorkuSensorFrontend/
 Modify the backend code in: BackendYorkuSensor/
 
 After making changes:
+```
 docker-compose up --build
+```
 
 To fully reset containers and data:
+```
 docker-compose down -v
 ```
 
