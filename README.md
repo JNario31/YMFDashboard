@@ -25,7 +25,7 @@ Verify docker compose installation
 docker-compose --version
 ```
 
-####🚀 Running the App
+#### 🚀 Running the App
 ```
 Clone Repo:
 git clone https://github.com/your-username/YMFSensorApp.git
@@ -34,14 +34,14 @@ cd YMFSensorApp
 Build and start containers in root folder:
 docker-compose up --build
 ```
-####🌐 Accessing the App
+#### 🌐 Accessing the App
 ```
 Component	URL
 Frontend	http://localhost:3000
 Backend	  http://localhost:4000
 ```
 
-####🧪 Making Changes
+#### 🧪 Making Changes
 ```
 Modify the frontend code in: YorkuSensorFrontend/
 Modify the backend code in: BackendYorkuSensor/
