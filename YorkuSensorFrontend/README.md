@@ -1,0 +1,1 @@
+This is the front end application for the York University Microfabrication sensors. This application interfaces with the backend flask application to interact with the sensor data stored in the postgres database.

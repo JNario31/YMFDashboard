@@ -1,0 +1,15 @@
+flask==2.2.5
+flask_sqlalchemy==2.5.1
+sqlalchemy==1.4.49   # ← pin to a 1.4 version
+
+psycopg2-binary
+Flask-Migrate
+flask_validator
+flask-script
+flask_socketio==5.3.3
+python-socketio>=5.0.2
+python-dateutil
+datetime
+flask_cors
+requests 
+requests_oauthlib
