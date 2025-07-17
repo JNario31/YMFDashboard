@@ -28,7 +28,7 @@ docker-compose --version
 #### 🚀 Running the App
 ```
 Clone Repo:
-git clone https://github.com/your-username/YMFSensorApp.git
+git clone https://github.com/JNario31/YMFDashboard.git
 cd YMFSensorApp
 
 Build and start containers in root folder:
